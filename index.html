@@ -3,32 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Writing Platform</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>WriteWise - Your Go-To Platform for Academic and Coding Help</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="card login-card">
-            <div class="card-header" style="text-align: center;">
-                <h1 class="logo">WriteWise</h1>
-                <h3>Welcome Back!</h3>
+
+    <!-- 1. Header / Navigation -->
+    <header class="header">
+        <a href="#" class="logo">WriteWise</a>
+        <nav class="main-nav">
+            
+        </nav>
+        <button class="mobile-nav-toggle" aria-controls="main-nav" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <svg class="icon-hamburger" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+            <svg class="icon-close" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- 2. Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Your Go-To Platform for Academic and Coding Help</h1>
+                <p>Writers and Clients working seamlessly together.</p>
+                <div class="hero-buttons">
+                    <a href="writer/dashboard.html" class="btn writer-btn">Writer Demo</a>
+                    <a href="client/dashboard.html" class="btn client-btn">Client Demo</a>
+                </div>
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="you@example.com">
+            <div class="hero-image">
+                <img src="AI-Powered Team Communication.png" alt="Illustration of people collaborating on a project">
+            </div>
+        </section>
+
+        <!-- 3. Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2>Why Choose WriteWise?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12.99H5V6.3l7-3.11v9.8z"/></svg>
+                        <h3>Secure Task Submission</h3>
+                        <p>Submit your academic or coding tasks through a secure and encrypted portal, ensuring confidentiality.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="••••••••">
+                    <div class="feature-card">
+                        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+                        <h3>Live Chat Between Users</h3>
+                        <p>Communicate directly with your writer or client in real-time to discuss project details and updates.</p>
                     </div>
-                    <p>Login as a Client: <a href="client/dashboard.html" class="btn btn-primary">Client Login</a></p>
-                    <p>Login as a Writer: <a href="writer/dashboard.html" class="btn btn-success">Writer Login</a></p>
-                </form>
+                    <div class="feature-card">
+                         <svg class="feature-icon" viewBox="0 0 24 24"><path d="M22 17H2v-2h20v2zm0-5H2v-2h20v2zm0-5H2V5h20v2zM12 22l-4-4h8l-4 4zM8 2l4 4 4-4H8z"/></svg>
+                        <h3>Instant Notifications</h3>
+                        <p>Stay informed with instant email and in-app notifications for messages, submissions, and payments.</p>
+                    </div>
+                    <div class="feature-card">
+                        <svg class="feature-icon" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.22-1.05-.59-1.42zM13 20.01L4 11V4h7l9 9-7 7.01z"/><circle cx="6.5" cy="6.5" r="1.5"/></svg>
+                        <h3>Transparent Payment System</h3>
+                        <p>Our secure escrow system holds payments until you are 100% satisfied with the completed work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2>Get Started in 3 Simple Steps</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Submit Your Task</h3>
+                        <p>Clients post a detailed description of their academic or coding task, including deadlines and budget.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Choose Your Expert</h3>
+                        <p>Review proposals from qualified writers and developers. Chat with them and select the best fit for your project.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Receive & Approve</h3>
+                        <p>Get your completed work, review it, and release the payment once you're fully satisfied with the result.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Testimonials Section (Optional) -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Loved by Clients and Writers</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <img src="profile1.png" alt="User photo">
+                        <blockquote>
+                            "WriteWise connected me with a brilliant developer who fixed a critical bug in my app overnight. A lifesaver!"
+                        </blockquote>
+                        <cite>
+                            <strong>Jane Mercy</strong>
+                            <br>
+                            Client, Tech Startup
+                        </cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="profile1.png" alt="User photo">
+                        <blockquote>
+                            "As a freelance academic writer, this platform has been a game-changer. The payment system is reliable and the clients are great."
+                        </blockquote>
+                        <cite>
+                            <strong>John Amonde</strong>
+                            <br>
+                            Academic Writer
+                        </cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Call to Action (CTA) Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to get started?</h2>
+                <p>Join our community of writers and clients now.</p>
+                <a href="#" class="btn cta-btn">Sign Up Free</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>WriteWise</h3>
+                <p>© 2024 WriteWise Inc. <br> All rights reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5a3.5 3.5 0 0 0-3.5 3.5V11h-2v3h2v7h3v-7h3v-3h-3V8.5A.5.5 0 0 1 15 8h3V5z"></path></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21c7.34 0 11.35-6.08 11.35-11.35 0-.17 0-.34-.01-.51.78-.57 1.45-1.28 1.99-2.08z"></path></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-11 4H5v11h3V7m-1.5-2a1.5 1.5 0 1 0 0 3a1.5 1.5 0 1 0 0-3M17 7h-2c-2 0-2 1-2 2v2h-2v3h2v6h3v-6h2v-3h-2v-1c0-1 1-1 1-1h1V7z"></path></svg></a>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
