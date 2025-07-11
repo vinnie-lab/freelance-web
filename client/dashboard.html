@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active"><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="submit-task.html"><i class="icon" data-feather="plus-square"></i> Submit New Task</a></li>
+                    <li><a href="my-orders.html"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Client Dashboard</h1>
+            <p class="text-muted">Welcome back, Jane! Here's a summary of your activity.</p>
+            
+            <div class="stats-grid">
+                <div class="card">
+                    <h3>2</h3>
+                    <p>Tasks in Progress</p>
+                </div>
+                <div class="card">
+                    <h3>5</h3>
+                    <p>Completed Tasks</p>
+                </div>
+                <div class="card">
+                    <h3>1</h3>
+                    <p>Pending Review</p>
+                </div>
+                <div class="card">
+                    <h3>$450.00</h3>
+                    <p>Total Spent</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Ongoing Tasks</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Task Title</th>
+                            <th>Status</th>
+                            <th>Deadline</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Technical Report on AI Ethics</td>
+                            <td><span class="status-badge status-progress">In Progress</span></td>
+                            <td>2024-10-28</td>
+                            <td><a href="my-orders.html" class="btn btn-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Python Web Scraper Script</td>
+                            <td><span class="status-badge status-progress">In Progress</span></td>
+                            <td>2024-10-25</td>
+                            <td><a href="my-orders.html" class="btn btn-primary">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Recent Notifications</h3>
+                </div>
+                <ul>
+                    <li>Your task "Technical Report..." has been started by Writer John.</li>
+                    <li>You have a new message from Writer John regarding "Technical Report...".</li>
+                    <li>Task "Blog Post on SEO" has been completed. Please review and approve.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>

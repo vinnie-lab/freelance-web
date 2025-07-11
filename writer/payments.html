@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" ><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="submit-task.html"><i class="icon" data-feather="plus-square"></i> Submit New Task</a></li>
+                    <li><a href="my-orders.html"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html" class="active"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Paste this code inside the <main class="main-content"> tag of your new file -->
+
+            <h1>Earnings & Payouts</h1>
+            <p class="text-muted">Track your earnings and manage your payouts.</p>
+
+            <div class="stats-grid">
+                <div class="card">
+                    <h3>$1,250.00</h3>
+                    <p>Total Earnings (This Month)</p>
+                </div>
+                <div class="card">
+                    <h3>$300.00</h3>
+                    <p>Pending Clearance (14 days)</p>
+                </div>
+                <div class="card">
+                    <h3>$950.00</h3>
+                    <p>Available for Withdrawal</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid" style="grid-template-columns: 1fr 2fr;">
+                <div class="card">
+                    <h3>Request Withdrawal</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="amount">Amount ($)</label>
+                            <input type="number" id="amount" placeholder="e.g., 950.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="payout-method">Payout Method</label>
+                            <select id="payout-method">
+                                <option>PayPal (john.doe@email.com)</option>
+                                <option>M-Pesa (+254...)</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-success">Withdraw Funds</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Earnings History</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Task</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-10-22</td>
+                                <td>Five Blog Posts on Travel</td>
+                                <td>$200.00</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-19</td>
+                                <td>Proofread a 10-page Document</td>
+                                <td>$50.00</td>
+                                <td><span class="status-badge status-completed">Cleared</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-15</td>
+                                <td>JavaScript Code Refactor</td>
+                                <td>$150.00</td>
+                                <td><span class="status-badge status-completed">Cleared</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-10-10</td>
+                                <td>Market Research Report</td>
+                                <td>$400.00</td>
+                                <td><span class="status-badge status-completed">Cleared</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>

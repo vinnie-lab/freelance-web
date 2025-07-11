@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" ><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="available-jobs.html" class="active"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+
+            <!-- Inside the <main class="main-content"> of available-jobs.html -->
+            <h1>Available Jobs Marketplace</h1>
+            <p class="text-muted">Find your next project. Filter by category and apply.</p>
+
+            <!-- Filters can go here -->
+
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3>Research Paper on Renewable Energy</h3>
+                    <p><strong>Type:</strong> Report | <strong>Pages:</strong> 15</p>
+                    <p><strong>Deadline:</strong> 2 weeks</p>
+                    <p><strong>Payment:</strong> $150</p>
+                    <button class="btn btn-success">Accept</button>
+                </div>
+                <div class="card">
+                    <h3>Fix CSS bug on a React Website</h3>
+                    <p><strong>Type:</strong> Coding | <strong>Language:</strong> CSS, React</p>
+                    <p><strong>Deadline:</strong> 3 days</p>
+                    <p><strong>Payment:</strong> $75</p>
+                    <button class="btn btn-success">Accept</button>
+                </div>
+                <!-- More job cards -->
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>
+
+
+

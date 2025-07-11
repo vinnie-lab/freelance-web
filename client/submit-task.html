@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" ><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="submit-task.html" class="active"><i class="icon" data-feather="plus-square"></i> Submit New Task</a></li>
+                    <li><a href="my-orders.html"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Submit a New Task</h1>
+            <p class="text-muted">Fill out the details below to post a new job for our writers.</p>
+
+            <div class="card">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Title / Topic</label>
+                        <input type="text" id="title" placeholder="e.g., Analysis of Q3 Marketing Data">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Task Description</label>
+                        <textarea id="description" placeholder="Provide detailed instructions, requirements, and any specific guidelines for the writer."></textarea>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="work-type">Type of Work</label>
+                            <select id="work-type">
+                                <option>Essay</option>
+                                <option>Report</option>
+                                <option>Coding Task</option>
+                                <option>Article</option>
+                                <option>Proofreading</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Subject / Category</label>
+                            <input type="text" id="category" placeholder="e.g., Computer Science, Business">
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="pages">Number of Pages / Words</label>
+                            <input type="number" id="pages" placeholder="e.g., 5 pages or 1500 words">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Deadline</label>
+                            <input type="date" id="deadline">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attachments">File Attachments (Optional)</label>
+                        <input type="file" id="attachments" multiple>
+                    </div>
+
+                    <div class="card" style="background-color: var(--bg-light-grey);">
+                        <h3>Price Calculation</h3>
+                        <p>The price is automatically calculated based on the number of pages and the deadline urgency.</p>
+                        <h2>Estimated Price: <span id="price-display">$0.00</span></h2>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg">Proceed to Payment & Submit</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- Inside the <main class="main-content"> of submit-task.html -->

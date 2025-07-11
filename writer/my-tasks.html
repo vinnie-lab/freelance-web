@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active"><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="submit-task.html"><i class="icon" data-feather="plus-square"></i> Submit New Task</a></li>
+                    <li><a href="my-orders.html"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Paste this code inside the <main class="main-content"> tag of your new file -->
+
+            <h1>My Tasks</h1>
+            <p class="text-muted">Here are all your accepted jobs. Keep an eye on the deadlines!</p>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Active & Submitted Tasks</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Task Title</th>
+                            <th>Client</th>
+                            <th>Status</th>
+                            <th>Deadline</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Technical Report on AI Ethics</td>
+                            <td>Jane Doe</td>
+                            <td><span class="status-badge status-progress">In Progress</span></td>
+                            <td>2024-10-28</td>
+                            <td>
+                                <button class="btn btn-primary">Submit Work</button>
+                                <a href="messages.html" class="btn btn-secondary">Message</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python Web Scraper Script</td>
+                            <td>Jane Doe</td>
+                            <td><span class="status-badge status-progress">In Progress</span></td>
+                            <td>2024-10-25</td>
+                            <td>
+                                <button class="btn btn-primary">Submit Work</button>
+                                <a href="messages.html" class="btn btn-secondary">Message</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Analysis of Marketing Data</td>
+                            <td>Bob Smith</td>
+                            <td><span class="status-badge status-revision">Revision Requested</span></td>
+                            <td>2024-10-26</td>
+                            <td>
+                                <button class="btn btn-danger">Submit Revision</button>
+                                <a href="messages.html" class="btn btn-secondary">View Notes</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Five Blog Posts on Travel</td>
+                            <td>Alice Ray</td>
+                            <td><span class="status-badge status-completed">Submitted</span></td>
+                            <td>2024-10-22</td>
+                            <td>
+                                <button class="btn btn-secondary" disabled>Awaiting Review</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Proofread a 10-page Document</td>
+                            <td>Sam Wilson</td>
+                            <td><span class="status-badge status-completed">Completed & Paid</span></td>
+                            <td>2024-10-19</td>
+                            <td>
+                                <span class="text-muted">No actions</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- This section could be a modal pop-up in a real application -->
+            <div class="card" id="submit-work-section">
+                <h3>Submit Work for "Technical Report on AI Ethics"</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="submission-files">Upload Completed Files</label>
+                        <input type="file" id="submission-files" multiple>
+                    </div>
+                    <div class="form-group">
+                        <label for="submission-notes">Notes for the Client (Optional)</label>
+                        <textarea id="submission-notes" placeholder="e.g., 'Here is the completed report. I have included all the requested charts in Appendix A.'"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit to Client</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active"><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="available-jobs.html"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Inside the <main class="main-content"> of writer/dashboard.html -->
+            <h1>Writer Dashboard</h1>
+            <p class="text-muted">Hello John, keep up the great work!</p>
+
+            <div class="stats-grid">
+                <div class="card">
+                    <h3>3</h3>
+                    <p>Active Tasks</p>
+                </div>
+                <div class="card">
+                    <h3>1</h3>
+                    <p>Pending Submission</p>
+                </div>
+                <div class="card">
+                    <h3>$1,250.00</h3>
+                    <p>Earnings this Month</p>
+                </div>
+                <div class="card">
+                    <h3>4.8 ★</h3>
+                    <p>Overall Rating</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Upcoming Deadlines</h3>
+                </div>
+                <table class="data-table">
+                    <!-- Table with tasks sorted by deadline -->
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>

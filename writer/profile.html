@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <div class="main-layout">
+        <header class="main-header">
+            <button class="menu-toggle">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="logo">WriteWise</div>
+            <div class="user-profile">
+                <span>Vincent Amonde</span>
+                <img src="https://i.pravatar.cc/150?u=client" alt="User Avatar">
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active"><i class="icon" data-feather="home"></i> Dashboard</a></li>
+                    <li><a href="submit-task.html"><i class="icon" data-feather="plus-square"></i> Submit New Task</a></li>
+                    <li><a href="my-orders.html"><i class="icon" data-feather="list"></i> My Orders</a></li>
+                    <li><a href="messages.html"><i class="icon" data-feather="message-square"></i> Messages</a></li>
+                    <li><a href="profile.html"><i class="icon" data-feather="user"></i> Profile Settings</a></li>
+                    <li><a href="payments.html"><i class="icon" data-feather="credit-card"></i> Payment & Invoices</a></li>
+                    <li><a href="../index.html"><i class="icon" data-feather="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Paste this code inside the <main class="main-content"> tag of your new file -->
+
+            <h1>Profile & Settings</h1>
+            <p class="text-muted">Manage your public profile, portfolio, and account settings.</p>
+
+            <div class="dashboard-grid" style="grid-template-columns: 1fr 2fr; align-items: start;">
+                <div class="card">
+                    <h3>Your Profile Photo</h3>
+                    <img src="https://i.pravatar.cc/150?u=writer" alt="Writer Avatar" style="border-radius: 50%; width: 150px; height: 150px; margin: 1rem auto;">
+                    <div class="form-group">
+                        <label for="photo-upload">Upload New Photo</label>
+                        <input type="file" id="photo-upload">
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Public Profile Information</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Writer Bio / About Me</label>
+                            <textarea id="bio">Experienced technical writer and Python developer with over 5 years of experience in creating clear, concise documentation and efficient web automation scripts. M.Sc. in Computer Science.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="skills">Qualifications / Skills (comma-separated)</label>
+                            <input type="text" id="skills" value="Technical Writing, Python, JavaScript, SEO, Data Analysis, Academic Research">
+                        </div>
+                        <div class="form-group">
+                            <label for="availability">Availability Status</label>
+                            <select id="availability">
+                                <option selected>Available</option>
+                                <option>Busy</option>
+                                <option>On Vacation</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio & Writing Samples</h3>
+                <ul>
+                    <li>Sample Technical Report.pdf - <a href="#">Remove</a></li>
+                    <li>Python Web Scraper Showcase.zip - <a href="#">Remove</a></li>
+                </ul>
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="portfolio-upload">Upload New Sample</label>
+                    <input type="file" id="portfolio-upload">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Account & Security</h3>
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" value="john.doe@email.com" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" placeholder="••••••••">
+                    </div>
+                </form>
+            </div>
+
+            <button class="btn btn-primary" style="padding: 0.8rem 2rem; font-size: 1.1rem;">Save All Changes</button>
+        </main>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+      feather.replace(); // To render icons
+    </script>
+</body>
+</html>
